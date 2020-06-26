@@ -1,0 +1,107 @@
+#Game playing... ...
+#Implematation of two players Tic Tac Toe game.
+'''We will have to create a board for playing. We'll make this board using dictionary and set its
+value as an empty string and it'll be changed according to the players movements'''
+my_board={'C1':' ','C2':' ','C3':' ',
+          'B1':' ','B2':' ','B3':' ',
+          'A1':' ','A2':' ','A3':' '}
+#take board keys to append the values.
+board_key=[]
+#create loop to take the value of key
+for keys in my_board:
+    board_key.append(keys)
+
+'''We will have printed the updated information according the players movements. To update the information 
+we'll use a function.'''
+def print_board(board):
+    print(board['C1']+'|'+board['C2']+'|'+board['C3'])
+    print("-+-+-")
+    print(board['B1']+'|'+board['B2']+'|'+board['B3'])
+    print("-+-+-")
+    print(board['A1']+'|'+board['A2']+'|'+board['A3'])
+    print("-+-+-")
+
+#Call the main function
+def game():
+    turn='X'
+    count=0
+    for i in range(10):
+        print_board(my_board)
+        print("It's your turn,"+ turn +"Move to which place?")
+
+        move=input()
+
+        if my_board[move]==' ':
+            my_board[move]=turn
+            count+=1
+        else:
+            print("That place have been blocked.\n Move to which place?")
+        #Now we will check the players status.
+        if count>=5:
+            #to check the horizental case
+            if my_board['C1']==my_board['C2']==my_board['C3']!=' ':
+                #across the top
+                print_board(my_board)
+                print("\t Game Over... \t")
+                print("***"+turn+"***won***")
+                break
+            elif my_board['B1']==my_board['B2']==my_board['B3']!=' ':
+                #accross the medium 
+                print_board(my_board)
+                print("\t Game Over... \t")
+                print("***"+turn+"***won***")
+                break
+            elif my_board['A1']==my_board['A2']==my_board['A3']!=' ':
+                #accross the bottom
+                print_board(my_board)
+                print("\t Game Over... \t")
+                print("***"+turn+"***won***")
+                break
+            #to check the vertical case
+            elif my_board['A1']==my_board['B1']==my_board['C1']!=' ':
+                #accross the left-side
+                print_board(my_board)
+                print("\t Game Over... \t")
+                print("***"+turn+"***won***")
+                break
+            elif my_board['A2']==my_board['B2']==my_board['C2']!=' ':
+                #accross the midele-side
+                print_board(my_board)
+                print("\t Game Over... \t")
+                print("***"+turn+"***won***")
+                break
+            elif my_board['A3']==my_board['B3']==my_board['C3']!=' ':
+                #accross the right-side
+                print_board(my_board)
+                print("\t Game Over... \t")
+                print("***"+turn+"***won***")
+                break
+            #to check the digonal
+            elif my_board['A1']==my_board['B2']==my_board['C3']!=' ':
+                print_board(my_board)
+                print("\t Game Over... \t")
+                print("***"+turn+"***won***")
+                break
+            elif my_board['C1']==my_board['B2']==my_board['A3']!=' ':
+                print_board(my_board)
+                print("\t Game Over... \t")
+                print("***"+turn+"***won***")
+                break
+        #when the case of tie
+        if count==9:
+            print("\t Game Over \t")
+            print("It's a Tie")
+        #we must change player movement
+        if turn=='X':
+            turn='O'
+        else:
+            turn='X'
+    #the case of restart the game
+    restart=input("Do you want to open the game Again(yes/no)?:")
+    #to check through condition 
+    if restart=='yes' or restart=='no':
+        for keys in board_key:
+            my_board[keys]=' '
+        game()
+if __name__ == "__main__":
+    game()
