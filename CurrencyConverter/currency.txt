@@ -1,0 +1,32 @@
+US dollar	                1.1276	
+Japanese yen	            120.48	
+Bulgarian lev	            1.9558	
+Czech koruna	            26.691	
+Danish krone	            7.4483	
+Pound sterling	            0.89570	
+Hungarian forint	        353.70	
+Polish zloty	            4.4743	
+Romanian leu	            4.8428	
+Swedish krona	            10.3980	
+Swiss franc	                1.0625	
+Icelandic krona	            159.00	
+Norwegian krone	            10.7163	
+Croatian kuna	            7.5345	
+Russian rouble	            80.2104	
+Turkish lira	            7.7417	
+Australian dollar	        1.6247	
+Brazilian real	            6.0691	
+Canadian dollar	            1.5336	
+Chinese yuan renminbi	    7.8952	
+Hong Kong dollar	        8.7396	
+Indonesian rupiah	        16276.91	
+Israeli shekel	            3.9006	
+Indian rupee	            84.8410	
+South Korean won	        1354.70	
+Mexican peso	            25.6953	
+Malaysian ringgit	        4.8109	
+New Zealand dollar	        1.7189	
+Philippine peso	            55.794	
+Singapore dollar	        1.5703	
+Thai baht	                35.316	
+South African rand	        19.0889
